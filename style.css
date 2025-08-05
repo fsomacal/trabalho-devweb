@@ -7,6 +7,7 @@
     font-family: 'Heebo', sans-serif;
 }
 
+
 a{
     text-decoration: none;
     color: #000;
@@ -20,11 +21,14 @@ img{
 
 nav{
     padding: 20px 148px;
-    background-color: #fff;
+    background-color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 600;
+    position: fixed;
+    width: 100%;
+    box-shadow: #000 0 1px 15px;
 }
 
 nav .logo{
@@ -48,6 +52,7 @@ nav .logo a{
 nav .nav-links{
     display: flex;
     gap: 16px;
+    justify-content: flex-end;
 }
 
 nav .nav-links a{
@@ -554,6 +559,7 @@ footer p{
     
     nav{
         justify-content: center;
+        position: relative;
     }
 
     nav .logo{
