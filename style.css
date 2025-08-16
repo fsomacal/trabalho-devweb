@@ -5,11 +5,25 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg);
+}
+
+:root{
+    --bg: white;
+    --text-color: black;
+    --logo: #3e3e3e;
+    --link-selected: #303f9f;
+    --button-hver: #1a237e;
+    --recent-bg: #dbedf2;
+    --feautured-bg: #e0e0e0;
+    --cinza: #8695a4;
+    --alt-color: rgb(101, 101, 101);
 }
 
 a{
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
 }
 
 img{
@@ -18,9 +32,30 @@ img{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.theme-toggle i {
+    font-size: 28px;
+    line-height: 1;
+    transition: color 0.3s;
+    display: block;
+}
+
+.theme-toggle:hover i {
+    color: var(--alt-color);
+}
+
 nav{
     padding: 20px 148px;
-    background-color: #f0f0f0;
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +79,7 @@ nav .logo img{
 
 nav .logo a{
     font-size: 15px;
-    color: #3e3e3e;
+    color: var(--logo);
     font-weight: bold;
 }
 
@@ -52,6 +87,7 @@ nav .nav-links{
     display: flex;
     gap: 16px;
     justify-content: flex-end;
+    align-items: center;
 }
 
 nav .nav-links a{
@@ -60,7 +96,7 @@ nav .nav-links a{
 
 nav .nav-links a:hover,
 nav .nav-links a.selected{
-    color: #303f9f;
+    color: var(--link-selected);
 }
 
 .main {
@@ -85,15 +121,15 @@ nav .nav-links a.selected{
 
 hr{
     margin-top: 15px;
-    border: 3px dashed #000 ;
+    border: 3px dashed var(--text-color) ;
     border-radius: 5%;
 }
 .main .info button,
 .content .post-list .post-item .buttons button{
     padding: 10px 30px;
-    background: #303f9f;
+    background: var(--link-selected);
     border: none;
-    color: #fff;
+    color: var(--bg);
     font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
@@ -102,7 +138,7 @@ hr{
 
 .main .info button:hover,
 .content .post-list .post-item .buttons button:hover{
-    background: #1a237e;
+    background: var(--button-hver);
 }
 
 .main img{
@@ -113,7 +149,7 @@ hr{
 
 .recent{
     padding: 60px 148px;
-    background-color: #dbedf2;
+    background-color: var(--recent-bg);
 }
 
 .recent .header{
@@ -121,28 +157,33 @@ hr{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    background-color: transparent;
 }
 
 .recent .header h4,
 .separator h4{
     font-size: 20px;
     font-weight: 400;
+    background-color: transparent;
 }
 
 .recent .header a{
-    color: #303f9f;
+    color: var(--link-selected);
+    background-color: transparent;
 }
 
 .recent .posts{
     display: flex;
     justify-content: center;
     gap: 20px;
+    background-color: transparent;
 }
 
 .recent .posts .post-item{
-    background-color: #fff;
+    background-color: var(--bg);
     padding: 24px;
     width: 460px;
+    background-color: var(--bg);
 }
 
 .recent .posts .post-item h3,
@@ -213,9 +254,9 @@ hr{
 .featured .item .details .item-info .year-badge,
 .works-list .item .details .item-info .year-badge,
 .content .work-info .year-badge{
-    background-color: #303f9f;
+    background-color: var(--link-selected);
     padding: 2px 14px;
-    color: #fff;
+    color: var(--bg);
     border-radius: 16px;
     font-size: 14px;
     font-weight: bold;
@@ -223,7 +264,7 @@ hr{
 
 .featured .item .details .item-info h4,
 .works-list .item .details .item-info h4{
-    color: #8695a4;
+    color: var(--cinza);
     font-size: 18px;
 }
 
@@ -254,7 +295,7 @@ footer .socials i{
 }
 
 footer .socials i:hover{
-    color: #303f9f;
+    color: var(--link-selected);
 }
 
 footer p{
@@ -282,7 +323,7 @@ footer p{
 }
 
 .content .work-info .category{
-    color: #8695a4;
+    color: var(--cinza);
     font-size: 18px;
 }
 
@@ -311,7 +352,7 @@ footer p{
 }
 
 .content .post-list .post-item{
-    background-color: #dbedf2;
+    background-color: var(--recent-bg);
     padding: 24px;
     width: 960px;
     border-radius: 10px;
@@ -337,11 +378,11 @@ footer p{
 }
 
 .content .post-list .post-item .buttons i:hover{
-    color: #303f9f;
+    color: var(--link-selected);
 }
 
 .content .container{
-    background-color: #dbedf2;
+    background-color: var(--recent-bg);
     padding: 30px;
     display: flex;
     align-items: center;
