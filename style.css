@@ -358,12 +358,20 @@ footer p{
     border-radius: 10px;
 }
 
+h3, p, h2, h5{
+    background-color: transparent;
+}
+.content .post-list .post-item .info{
+    background-color: transparent;
+}
+
 .content .post-list .post-item .buttons{
     margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    background-color: transparent;
 }
 
 .content .post-list .post-item .buttons button{
@@ -401,16 +409,31 @@ footer p{
     margin-bottom: 20px;
     font-size: 30px;
 }
-
+.content .container .about{
+    background-color: transparent;
+}
 .content .container .about>p{
     text-align: justify;
 }
 
+.content .container a{
+    background-color: transparent;
+}
 .content .container .about .email{
     font-weight: bold;
     margin-top: 30px;
     font-size: 14px;
+    background-color: transparent;
 }
+
+.bx {
+    font-size: 24px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+
 
 @media screen and (max-width: 1400px) {
     
