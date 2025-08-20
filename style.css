@@ -46,7 +46,6 @@ img{
 .theme-toggle i {
     font-size: 28px;
     line-height: 1;
-    transition: color 0.3s;
     display: block;
 }
 
